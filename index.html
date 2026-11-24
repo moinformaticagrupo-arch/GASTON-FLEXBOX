@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Práctico 1: maquetado con CSS Flexbox.">
+  <title>Práctico 1 | Estudio Norte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ENCABEZADO: Flexbox alinea la marca, los enlaces y el botón en una fila. -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio"><span class="brand-symbol">N.</span><span>ESTUDIO<br><small>NORTE</small></span></a>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#estudio">El estudio</a><a href="#trabajos">Trabajos</a><a href="#contacto">Contacto</a>
+      </nav>
+      <a class="nav-action" href="#contacto">Hablemos <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- PORTADA: Flexbox organiza el texto y la imagen en dos columnas y los centra verticalmente. -->
+    <section class="hero" id="inicio">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="overline"><i></i> DISEÑO CON IDENTIDAD</span>
+          <h1>Un espacio<br>para las <em>buenas</em><br>ideas.</h1>
+          <p>Un estudio creativo donde el diseño, la tecnología y la imaginación se encuentran para dar forma a nuevas experiencias.</p>
+          <div class="hero-links">
+            <a class="primary-btn" href="#trabajos">Explorar trabajos <span>↗</span></a>
+            <span class="hero-caption">DISEÑO · WEB · CREATIVIDAD</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85" alt="Estudio de diseño luminoso y moderno">
+          <div class="image-note"><strong>01</strong><span>CREATIVIDAD<br>EN CADA DETALLE</span></div>
+          <div class="round-stamp">IDEAS<br>QUE<br>INSPIRAN</div>
+        </div>
+      </div>
+      <div class="hero-bottom container"><span>BUENOS AIRES · ARGENTINA</span><span>DESLIZÁ PARA DESCUBRIR ↓</span></div>
+    </section>
+
+    <!-- PRESENTACIÓN: Flexbox ubica el título y el texto en extremos opuestos. -->
+    <section class="intro section" id="estudio">
+      <div class="container">
+        <div class="section-label"><span>01 / EL ESTUDIO</span><span>UNA MIRADA DIFERENTE</span></div>
+        <div class="intro-layout">
+          <h2>Creemos en el<br>poder de <em>crear.</em></h2>
+          <div class="intro-text">
+            <p>Las grandes soluciones comienzan con una pregunta y crecen con buenas ideas. Trabajamos para convertir conceptos en propuestas visuales claras, funcionales y memorables.</p>
+            <a href="#trabajos" class="under-link">Conocé nuestro enfoque <span>→</span></a>
+          </div>
+        </div>
+        <!-- SERVICIOS: Flexbox distribuye las tarjetas y flex-wrap permite crear nuevas filas. -->
+        <div class="services">
+          <article class="service"><span>01</span><div class="service-icon">✳</div><h3>Diseño visual</h3><p>Identidad y comunicación para transmitir ideas con claridad.</p></article>
+          <article class="service"><span>02</span><div class="service-icon">⌘</div><h3>Desarrollo web</h3><p>Experiencias digitales simples, útiles y adaptables.</p></article>
+          <article class="service"><span>03</span><div class="service-icon">◌</div><h3>Creatividad</h3><p>Nuevas perspectivas para resolver desafíos de manera original.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA: Flexbox distribuye las tarjetas; las imágenes mantienen su proporción con object-fit. -->
+    <section class="work section" id="trabajos">
+      <div class="container">
+        <div class="section-label"><span>02 / SELECCIÓN DE TRABAJOS</span><span>INSPIRACIÓN VISUAL</span></div>
+        <div class="work-heading"><h2>Ideas que toman<br><em>forma.</em></h2><p>Una selección de referencias visuales para mostrar una galería flexible y adaptable.</p></div>
+        <div class="gallery">
+          <article class="gallery-card gallery-wide">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Oficina de diseño con luz natural">
+            <div class="gallery-text"><span>01 — ESPACIOS</span><h3>Un lugar para imaginar</h3></div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85" alt="Computadora en un espacio de trabajo">
+            <div class="gallery-text"><span>02 — TECNOLOGÍA</span><h3>Ideas digitales</h3></div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=85" alt="Objetos creativos sobre un escritorio">
+            <div class="gallery-text"><span>03 — INSPIRACIÓN</span><h3>Detalles cotidianos</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO: Flexbox coloca el mensaje y el botón en extremos opuestos. -->
+    <section class="contact" id="contacto">
+      <div class="container contact-layout">
+        <div><span class="contact-label">¿TENÉS UN PROYECTO EN MENTE?</span><h2>Hagamos algo<br><em>extraordinario.</em></h2></div>
+        <a href="mailto:hola@estudionorte.com" class="contact-button">Ponete en contacto <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA: Flexbox separa los datos de marca y la información final. -->
+  <footer class="footer">
+    <div class="container footer-layout">
+      <a class="brand footer-brand" href="#inicio"><span class="brand-symbol">N.</span><span>ESTUDIO<br><small>NORTE</small></span></a>
+      <p>Práctico 1 · Maquetando con Flexbox</p>
+      <span>© 2026 · Proyecto educativo</span>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

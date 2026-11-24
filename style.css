@@ -1,0 +1,110 @@
+/* BASE Y PALETA */
+:root{--navy:#172d3a;--blue:#315f73;--orange:#e58a61;--cream:#f5f2eb;--paper:#fffefa;--gray:#77828a;--line:#dddcd5}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--navy);font-family:"DM Sans",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.container{width:min(1140px,calc(100% - 52px));margin:0 auto}
+h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:600}
+
+/* ENCABEZADO: display:flex distribuye logo, navegación y acción. */
+.header{background:var(--paper);border-bottom:1px solid var(--line)}
+.nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:2px;line-height:1.25}
+.brand-symbol{font-family:"Playfair Display",serif;font-size:34px;color:var(--orange);letter-spacing:-3px}
+.brand small{font-size:9px;letter-spacing:4px;color:var(--blue)}
+.nav nav{display:flex;align-items:center;gap:32px;color:#68757b;font-size:12px}
+.nav nav a:hover{color:var(--orange)}
+.nav-action{font-size:11px;font-weight:700;border-bottom:1px solid var(--orange);padding:9px 0}
+.nav-action span{color:var(--orange);margin-left:12px}
+
+/* PORTADA: dos columnas flexibles, centradas verticalmente. */
+.hero{background:var(--cream);position:relative;padding:65px 0 0;overflow:hidden}
+.hero-layout{display:flex;align-items:center;justify-content:space-between;gap:65px;min-height:500px}
+.hero-copy{flex:1 1 48%;padding:25px 0 50px}
+.overline{display:flex;align-items:center;gap:10px;font-size:9px;font-weight:800;letter-spacing:2px;color:var(--blue)}
+.overline i{display:inline-block;width:25px;height:2px;background:var(--orange)}
+h1{font-size:clamp(54px,7vw,83px);line-height:1.02;letter-spacing:-3px;margin:28px 0 22px}
+h1 em,h2 em{color:var(--orange);font-style:italic}
+.hero-copy>p{font-size:14px;line-height:1.9;color:#66757b;max-width:430px}
+.hero-links{display:flex;align-items:center;gap:25px;flex-wrap:wrap;margin-top:34px}
+.primary-btn{display:inline-flex;align-items:center;gap:28px;background:var(--navy);color:white;padding:15px 18px;font-size:11px;font-weight:700}
+.primary-btn span{color:#f1a17b;font-size:17px}
+.hero-caption{font-size:8px;letter-spacing:1.4px;color:#879197}
+.hero-image{position:relative;flex:0 1 490px;height:430px}
+.hero-image>img{width:100%;height:100%;object-fit:cover;display:block}
+.image-note{position:absolute;left:-22px;bottom:35px;background:var(--paper);display:flex;align-items:center;gap:13px;padding:17px 20px;box-shadow:0 10px 30px #172d3a15}
+.image-note strong{font-family:"Playfair Display",serif;font-size:27px;color:var(--orange)}
+.image-note span{font-size:8px;line-height:1.6;font-weight:800;letter-spacing:1px}
+.round-stamp{position:absolute;right:-24px;top:28px;width:90px;height:90px;border-radius:50%;background:var(--orange);color:white;display:flex;align-items:center;justify-content:center;text-align:center;font-size:9px;line-height:1.4;font-weight:800;letter-spacing:1px;transform:rotate(10deg)}
+.hero-bottom{display:flex;justify-content:space-between;gap:20px;padding:24px 0;font-size:8px;letter-spacing:1.5px;color:#7b8587}
+
+/* PRESENTACIÓN: Flexbox separa el título del texto y organiza las tarjetas. */
+.section{padding:95px 0}
+.section-label{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--line);padding-bottom:15px;font-size:8px;letter-spacing:1.7px;font-weight:800;color:#899194}
+.intro-layout{display:flex;align-items:center;justify-content:space-between;gap:65px;padding:50px 0 55px}
+h2{font-size:clamp(40px,5vw,59px);line-height:1.08;letter-spacing:-2px;margin:0}
+.intro-text{max-width:440px}
+.intro-text p,.work-heading p{font-size:13px;line-height:1.9;color:#748087;margin:0 0 20px}
+.under-link{font-size:11px;font-weight:800;border-bottom:1px solid var(--orange);padding-bottom:8px}
+.under-link span{color:var(--orange);margin-left:13px}
+.services{display:flex;flex-wrap:wrap;gap:16px}
+.service{position:relative;flex:1 1 230px;min-height:220px;border:1px solid var(--line);padding:25px;background:#fff}
+.service>span{font-size:9px;color:#9aa2a1}
+.service-icon{font-family:"Playfair Display",serif;font-size:30px;color:var(--orange);margin:22px 0 12px}
+.service h3{font-family:"Playfair Display",serif;font-size:19px;margin:0 0 9px}
+.service p{font-size:11px;line-height:1.7;color:#7b8588;margin:0}
+
+/* GALERÍA: flex-wrap acomoda los proyectos en filas cuando no hay espacio suficiente. */
+.work{background:#eaf0f1}
+.work-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;padding:45px 0 35px}
+.work-heading p{max-width:300px;margin-bottom:4px}
+.gallery{display:flex;flex-wrap:wrap;gap:17px}
+.gallery-card{position:relative;flex:1 1 270px;height:290px;overflow:hidden;background:#b9c6c8}
+.gallery-wide{flex:2 1 480px}
+.gallery-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s}
+.gallery-card:hover img{transform:scale(1.05)}
+.gallery-card:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#102936d9)}
+.gallery-text{position:absolute;z-index:1;bottom:21px;left:23px;color:white}
+.gallery-text span{font-size:8px;letter-spacing:1.5px;color:#f4b18f;font-weight:800}
+.gallery-text h3{font-family:"Playfair Display",serif;font-size:21px;margin:7px 0 0}
+
+/* CONTACTO: alinea el texto y el botón y los distribuye a los extremos. */
+.contact{background:var(--navy);color:white;padding:75px 0}
+.contact-layout{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.contact-label{font-size:8px;letter-spacing:2px;color:#b8c8c9;font-weight:800}
+.contact-layout h2{font-size:clamp(38px,5vw,57px);margin-top:15px}
+.contact-layout h2 em{color:#f0a17e}
+.contact-button{background:var(--orange);color:white;padding:17px 20px;font-size:11px;font-weight:700;white-space:nowrap}
+.contact-button span{margin-left:20px}
+
+/* PIE: Flexbox distribuye la identidad, el nombre de la actividad y el cierre. */
+.footer{background:#10232e;color:#c2ccca;padding:25px 0}
+.footer-layout{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-brand{color:white}
+.footer-layout p,.footer-layout>span{font-size:9px;margin:0;color:#a6b2b2}
+
+/* RESPONSIVE: en móviles se apilan columnas para evitar desbordamientos. */
+@media(max-width:780px){
+ .container{width:calc(100% - 36px)}
+ .nav{flex-wrap:wrap;padding:13px 0}
+ .nav nav{order:3;width:100%;justify-content:center;gap:23px;padding:8px 0}
+ .hero-layout{flex-direction:column;align-items:stretch;gap:20px;padding-top:25px}
+ .hero-copy{padding:20px 0 10px}
+ .hero-image{flex:auto;width:calc(100% - 15px);height:350px;margin-left:15px}
+ .intro-layout{flex-direction:column;align-items:flex-start;gap:20px}
+ .work-heading{flex-direction:column;align-items:flex-start;gap:12px}
+ .contact-layout{flex-direction:column;align-items:flex-start}
+ .footer-layout{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:460px){
+ .section{padding:70px 0}
+ .nav nav{gap:15px;font-size:10px}
+ h1{font-size:57px}
+ .hero-image{height:270px}
+ .round-stamp{right:-8px;width:75px;height:75px;font-size:8px}
+ .image-note{left:-10px;bottom:15px}
+ .hero-bottom{font-size:7px}
+ .section-label{font-size:7px}
+ .gallery-card,.gallery-wide{flex-basis:100%;height:240px}
+}
